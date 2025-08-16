@@ -1,0 +1,30 @@
+name: Build STM32L0xx Template
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/stm32-libraries/stm32l0xx-ci-docker:latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Make build script executable
+        run: chmod +x scripts/build.sh
+
+      - name: Allow workspace as safe Git directory
+        run: git config --global --add safe.directory $GITHUB_WORKSPACE
+
+      - name: Update submodules
+        run: git submodule update --init --recursive --remote -f
+
+      - name: Run build
+        run: |
+          export CC=arm-none-eabi-gcc
+          export CXX=arm-none-eabi-g++
+          scripts/build.sh
