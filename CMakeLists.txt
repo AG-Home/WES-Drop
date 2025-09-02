@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.22)
 
 # Project name
-project(template)
+project(WES_DROP)
 
 # Specify the target system
 set(CMAKE_SYSTEM_NAME Linux)  # Cross-compilation for ARM on a Linux host
@@ -10,7 +10,7 @@ set(CMAKE_SYSTEM_PROCESSOR arm)  # Specify the ARM processor architecture
 
 # Define the source files for the project
 set(SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/src/template_appl.c         # Main application
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c                  # Main application
     ${CMAKE_CURRENT_SOURCE_DIR}/src/stm32l0xx_hal_msp.c     # Hardware abstraction layer (HAL) MSP functions
     ${CMAKE_CURRENT_SOURCE_DIR}/src/stm32l0xx_it.c          # Interrupt handler
     ${CMAKE_CURRENT_SOURCE_DIR}/src/system_stm32l0xx.c      # System initialization
@@ -48,6 +48,8 @@ set(CMAKE_EXE_LINKER_FLAGS "-T ${CMAKE_CURRENT_SOURCE_DIR}/linker/linker.ld \
 # Add subdirectory for the STM32 HAL library
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/STM32L0xx_HAL_ST stm32l0xx_hal_st)
 
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib/display)
+
 # Define the executable target for the project
 # This will compile and link the sources into the final executable
 add_executable(${PROJECT_NAME}_appl.out ${SOURCES})
@@ -55,4 +57,5 @@ add_executable(${PROJECT_NAME}_appl.out ${SOURCES})
 # Link the executable with the STM32 HAL library
 target_link_libraries(${PROJECT_NAME}_appl.out 
     stm32l0xx_hal_st  # STM32 HAL static library
+    display
 )

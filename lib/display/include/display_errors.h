@@ -1,34 +1,30 @@
 /**********************************************************************************************************************
- * \file template_app.c
+ * \file display_errors.h
  *
- * \author MarcoAAG
+ * \author  MarcoAAG
  *
- * \date April-18-2025
+ * \date Sep-01-2025
  *
  * \version 1.0 \n \n
  *
  *********************************************************************************************************************/
 
-#include <stm32l0xx_hal.h>
-#include <system_clock.h>
+#ifndef DISPLAY_ERRORS_H
+#define DISPLAY_ERRORS_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-int main()
+typedef enum
 {
-  HAL_Init();
-
-  // Configure the system clock to 2 MHz
-  SYSTEMCLOCK_v_Config();
-
-  // Infinite loop
-  while(1)
-  {
-  }
-}
+  DISPLAY_OK          = 0,
+  DISPLAY_ERR_IIC     = -1,
+  DISPLAY_ERR_SSD1309 = -2
+} DISPLAY_ERROR;
 
 #ifdef __cplusplus
 }
 #endif
+
+#endif // DISPLAY_ERRORS_H

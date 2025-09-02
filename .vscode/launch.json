@@ -5,7 +5,7 @@
           "name": "Debug",
           "type": "cortex-debug",
           "request": "launch",
-          "executable": "${workspaceFolder}/build/template_appl.out",
+          "executable": "${workspaceFolder}/build/WES_DROP_appl.out",
           "servertype": "openocd",
           "configFiles": [
               "interface/stlink.cfg",
