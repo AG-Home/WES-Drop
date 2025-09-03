@@ -24,8 +24,8 @@ jobs:
         run: git submodule update --init --recursive -f
         
       - name: Show submodule commit
-        run: git submodule st
-        
+        run: git submodule status
+
       - name: Run build
         run: |
           export CC=arm-none-eabi-gcc
