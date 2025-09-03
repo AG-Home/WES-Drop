@@ -21,8 +21,11 @@ jobs:
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
       - name: Update submodules
-        run: git submodule update --init --recursive --remote -f
-
+        run: git submodule update --init --recursive -f
+        
+      - name: Show submodule commit
+        run: git submodule st
+        
       - name: Run build
         run: |
           export CC=arm-none-eabi-gcc
