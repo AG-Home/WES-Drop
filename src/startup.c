@@ -5,8 +5,13 @@
  *
  * \date Sep-25-2024
  *
- * \version 1.0 \n \n
+ * \version 1.1 \n \n
  *
+ *  - Copies .data from Flash to SRAM
+ *  - Zeroes .bss
+ *  - Optionally calls SystemInit() (weak, can be overridden to configure clocks, etc.)
+ *  - Jumps to main()
+ *  - Provides a vector table aligned to 128 bytes
  *********************************************************************************************************************/
 
 #include <stdint.h>
@@ -24,6 +29,11 @@ extern uint32_t _ebss;
 
 int main(void);
 
+/* SystemInit is optional; override it in your system.c to set up clocks, etc. */
+__attribute__((weak)) void SystemInit(void)
+{ /* default: do nothing */
+}
+
 void Default_Handler(void)
 {
   while(1);
@@ -31,25 +41,25 @@ void Default_Handler(void)
 
 void Reset_Handler(void)
 {
-  uint32_t* psrc = &_sidata;
-  uint32_t* pdst = &_sdata;
-
-  while(pdst < &_edata)
+  // Copy .data from Flash to RAM
+  for(uint32_t *src = &_sidata, *dst = &_sdata; dst < &_edata;)
   {
-    *pdst = *psrc;
-    ++psrc;
-    ++pdst;
+    *dst++ = *src++;
   }
 
-  pdst = &_sbss;
-  while(pdst < &_ebss)
+  // Zero-initialize the .bss section (_sbss.._ebss)
+  for(uint32_t* dst = &_sbss; dst < &_ebss;)
   {
-    *pdst = 0;
-    ++pdst;
+    *dst++ = 0U;
   }
 
+  // Optional system setup (clocks, FPU, caches, etc.) */
+  SystemInit();
+
+  // Enter the application
   main();
 
+  /* If main() ever returns, trap here */
   while(1);
 }
 
@@ -95,7 +105,7 @@ void AES_RNG_LPUART1_IRQHandler(void) __attribute__((weak, alias("Default_Handle
 /*******************************************************************************
  *            Vector Table definition
  ******************************************************************************/
-uint32_t vector_table[] __attribute__((section(".isr_vector"))) = {
+uint32_t vector_table[] __attribute__((section(".isr_vector"), used, aligned(128))) = {
   (uint32_t)&_estack,           // Initial Stack Pointer
   (uint32_t)&Reset_Handler,     // Reset Handler
   (uint32_t)&NMI_Handler,       // NMI Handler

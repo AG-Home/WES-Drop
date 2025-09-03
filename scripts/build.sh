@@ -12,7 +12,10 @@ mkdir -p build
 # Redirect all output (stdout and stderr) to both terminal and log file
 exec > >(tee "$LOGFILE") 2>&1
 
-echo "🔧 Compiling STM32 project..."
+# Default target (si no se pasa argumento, se compila todo)
+TARGET=${1:-all}
+
+echo "🔧 Compiling target: $TARGET ..."
 
 # Navigate into the build directory
 pushd build > /dev/null
@@ -21,14 +24,13 @@ pushd build > /dev/null
 export CC=arm-none-eabi-gcc
 export CXX=arm-none-eabi-g++
 
-# Run CMake to configure the project
-# The linker flag '--specs=nosys.specs' avoids linking to system-level functions not available in bare-metal
+# Run CMake to configure the project (solo la primera vez es necesario)
 cmake -DCMAKE_EXE_LINKER_FLAGS="--specs=nosys.specs" ..
 
-# Build the project using all available CPU cores
-make -j$(nproc)
+# Build the selected target
+make "$TARGET" -j$(nproc)
 
 # Return to the original directory
 popd > /dev/null
 
-echo "✅ Build complete."
+echo "✅ Build of $TARGET complete."
