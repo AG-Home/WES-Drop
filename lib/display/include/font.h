@@ -25,7 +25,6 @@ typedef struct
   uint8_t     u_charHeight;
 } Font_t;
 
-extern const uint16_t FONT11x18[];
 extern const uint32_t FONT32x56[];
 
 #ifdef __cplusplus

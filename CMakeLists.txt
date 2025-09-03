@@ -31,7 +31,7 @@ include_directories(
 # -std=c11: Use the C11 standard
 # -Wl,-Map=output.map: Generate a linker map file for memory layout inspection
 set(CMAKE_C_FLAGS "-mcpu=cortex-m0plus \
-                   -O2 \
+                   -O0 \
                    -g \
                    -Wall \
                    -std=c11 \

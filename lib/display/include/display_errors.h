@@ -18,9 +18,10 @@ extern "C" {
 
 typedef enum
 {
-  DISPLAY_OK          = 0,
-  DISPLAY_ERR_IIC     = -1,
-  DISPLAY_ERR_SSD1309 = -2
+  DISPLAY_OK           = 0,
+  DISPLAY_ERR_IIC      = -1,
+  DISPLAY_ERR_SSD1309  = -2,
+  DISPLAY_ERR_EXCEEDED = -3
 } DISPLAY_ERROR;
 
 #ifdef __cplusplus

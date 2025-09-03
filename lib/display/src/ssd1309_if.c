@@ -66,7 +66,7 @@ DISPLAY_ERROR SSD1309_InitInterface(SSD1315_Object_t* tp_obj)
   t_iicHandle.Init.GeneralCallMode  = I2C_GENERALCALL_DISABLE;
   t_iicHandle.Init.NoStretchMode    = I2C_NOSTRETCH_DISABLE;
 
-  // Enable the Analog I2C 
+  // Enable the Analog I2C
   if(HAL_I2C_Init(&t_iicHandle) != HAL_OK)
   {
     e_retVal = DISPLAY_ERR_IIC;

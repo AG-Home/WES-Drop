@@ -16,20 +16,27 @@
 /*                                         Include Files                                          */
 /* ============================================================================================== */
 #include <display_errors.h>
+#include <font.h>
+#include <ssd1315.h>
 #include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+typedef struct
+{
+  SSD1315_Object_t t_driver;
+  Font_t           t_font;
+} Display_Object;
+
 /* ============================================================================================== */
 /*                                         Public Functions                                       */
 /* ============================================================================================== */
 
-DISPLAY_ERROR DISPLAY_Init(void);
+DISPLAY_ERROR DISPLAY_e_Init(Display_Object* p_obj);
 
-DISPLAY_ERROR DISPLAY_ShowLevel(uint8_t u_percentage);
-
+DISPLAY_ERROR DISPLAY_e_ShowLevel(Display_Object* p_obj, uint8_t u_percentage);
 
 #ifdef __cplusplus
 }
