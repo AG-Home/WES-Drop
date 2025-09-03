@@ -4,3 +4,6 @@
 [submodule "lib/display/SSD1315-1309"]
 	path = lib/display/SSD1315-1309
 	url = https://github.com/MarcoAAG/SSD1315-1309.git
+[submodule "lib/level/SR04M"]
+	path = lib/level/SR04M
+	url = https://github.com/MarcoAAG/SR04M.git

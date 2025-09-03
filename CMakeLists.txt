@@ -49,6 +49,7 @@ set(CMAKE_EXE_LINKER_FLAGS "-T ${CMAKE_CURRENT_SOURCE_DIR}/linker/linker.ld \
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/STM32L0xx_HAL_ST stm32l0xx_hal_st)
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib/display)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib/level)
 
 # Define the executable target for the project
 # This will compile and link the sources into the final executable
@@ -58,4 +59,5 @@ add_executable(${PROJECT_NAME}_appl.out ${SOURCES})
 target_link_libraries(${PROJECT_NAME}_appl.out 
     stm32l0xx_hal_st  # STM32 HAL static library
     display
+    level
 )
