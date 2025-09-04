@@ -14,12 +14,19 @@
 
 #include <level_errors.h>
 #include <sr04m.h>
+#include <stm32l0xx_hal.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-LEVEL_ERROR SR04M_InitInterface(SR04M_Object* tp_obj);
+typedef struct
+{
+  USART_TypeDef*   pt_instance;
+  UART_InitTypeDef t_parameters;
+} LEVEL_UART_PARAMS;
+
+LEVEL_Status SR04M_InitInterface(SR04M_Object* tp_obj, LEVEL_UART_PARAMS* tp_uartObj);
 
 #ifdef __cplusplus
 }

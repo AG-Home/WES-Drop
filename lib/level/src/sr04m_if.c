@@ -10,7 +10,6 @@
  *********************************************************************************************************************/
 
 #include <sr04m_if.h>
-#include <stm32l0xx_hal.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -26,33 +25,25 @@ SR04M_IO t_SR04T_IO = {
 
 UART_HandleTypeDef UartHandle;
 
-LEVEL_ERROR SR04M_InitInterface(SR04M_Object* tp_obj)
+LEVEL_Status SR04M_InitInterface(SR04M_Object* tp_obj, LEVEL_UART_PARAMS* tp_uartObj)
 {
-  LEVEL_ERROR e_retVal = LEVEL_OK;
+  LEVEL_Status e_retVal = LEVEL_OK;
 
-  /*Configure the UART peripheral */
-  /* Put the USART peripheral in the Asynchronous mode (UART Mode) */
-  /* UART configured as follows:
-      - Word Length = 8 Bits (7 data bit + 1 parity bit) :
-      - Stop Bit    = One Stop bit
-      - Parity      = ODD parity
-      - BaudRate    = 9600 baud
-      - Hardware flow control disabled (RTS and CTS signals) */
-  UartHandle.Instance = USART2;
-
-  UartHandle.Init.BaudRate   = 9600;
-  UartHandle.Init.WordLength = UART_WORDLENGTH_8B;
-  UartHandle.Init.StopBits   = UART_STOPBITS_1;
-  UartHandle.Init.Parity     = UART_PARITY_NONE;
-  UartHandle.Init.HwFlowCtl  = UART_HWCONTROL_NONE;
-  UartHandle.Init.Mode       = UART_MODE_TX_RX;
+  // Configure the UART peripheral
+  UartHandle.Instance        = tp_uartObj->pt_instance;
+  UartHandle.Init.BaudRate   = tp_uartObj->t_parameters.BaudRate;
+  UartHandle.Init.WordLength = tp_uartObj->t_parameters.WordLength;
+  UartHandle.Init.StopBits   = tp_uartObj->t_parameters.StopBits;
+  UartHandle.Init.Parity     = tp_uartObj->t_parameters.Parity;
+  UartHandle.Init.HwFlowCtl  = tp_uartObj->t_parameters.HwFlowCtl;
+  UartHandle.Init.Mode       = tp_uartObj->t_parameters.Mode;
   if(HAL_UART_Init(&UartHandle) != HAL_OK)
   {
     e_retVal = LEVEL_ERR_UART;
   }
   else
   {
-    if(SR04M_u_Init(tp_obj, &t_SR04T_IO, MODE5) == SR04M_ERROR)
+    if(SR04M_u_Init(tp_obj, &t_SR04T_IO) == SR04M_ERROR)
     {
       e_retVal = LEVEL_ERR_INIT;
     }
