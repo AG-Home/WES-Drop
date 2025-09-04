@@ -1,8 +1,8 @@
 # STM32L0xx_Template
 
 [![Latest Release](https://img.shields.io/github/v/release/AG-Home/WES-SW?label=release&color=4caf50)](https://github.com/AG-Home/WES-SW/releases/latest)
-[![Last Commit](https://img.shields.io/github/last-commit/AG-Home/WES-SW?color=ff9800)](https://github.com/AG-Home/WES-SW/commits/version/drop)
-[![Build](https://github.com/AG-Home/WES-SW/actions/workflows/build.yml/badge.svg?branch=version/drop)](https://github.com/AG-Home/WES-SW/actions/workflows/build.yml)
+[![Last Commit](https://img.shields.io/github/last-commit/AG-Home/WES-SW?color=ff9800)](https://github.com/AG-Home/WES-SW/commits/main)
+[![Build](https://github.com/AG-Home/WES-SW/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/AG-Home/WES-SW/actions/workflows/build.yml)
 
 WES Water Echo System
 ---
