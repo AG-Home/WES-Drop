@@ -20,17 +20,18 @@ extern "C" {
 
 typedef struct
 {
-  SR04M_Object t_driver;
-  SR04M_Modes  e_mode;
+  SR04M_Object      t_driver;
+  SR04M_Modes       e_mode;
+  LEVEL_UART_PARAMS t_uartParams;
 } Level_Object;
 
 /* ============================================================================================== */
 /*                                         Public Functions                                       */
 /* ============================================================================================== */
 
-LEVEL_ERROR LEVEL_e_Init(Level_Object* p_obj);
+LEVEL_Status LEVEL_e_Init(Level_Object* p_obj);
 
-LEVEL_ERROR LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level);
+LEVEL_Status LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level);
 
 #ifdef __cplusplus
 }

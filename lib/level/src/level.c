@@ -15,18 +15,23 @@
 extern "C" {
 #endif
 
-LEVEL_ERROR LEVEL_e_Init(Level_Object* p_obj)
+LEVEL_Status LEVEL_e_Init(Level_Object* p_obj)
 {
-  LEVEL_ERROR e_retVal;
+  LEVEL_Status e_retVal;
 
-  e_retVal = SR04M_InitInterface(&p_obj->t_driver);
+  e_retVal = SR04M_InitInterface(&p_obj->t_driver, &p_obj->t_uartParams);
 
   return e_retVal;
 }
 
-LEVEL_ERROR LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level)
+LEVEL_Status LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level)
 {
-  return LEVEL_OK;
+  LEVEL_Status e_retVal;
+  uint16_t     u_distance;
+
+  e_retVal = SR04M_u_GetDistance(&p_obj->t_driver, &u_distance, p_obj->e_mode);
+
+  return e_retVal;
 }
 
 #ifdef __cplusplus
