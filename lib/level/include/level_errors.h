@@ -18,9 +18,10 @@ extern "C" {
 
 typedef enum
 {
-  LEVEL_OK       = 0,
-  LEVEL_ERR_UART = -1,
-  LEVEL_ERR_INIT = -2
+  LEVEL_OK           = 0,
+  LEVEL_ERR_UART     = -1,
+  LEVEL_ERR_INIT     = -2,
+  LEVEL_ERR_DISTANCE = -3
 } LEVEL_Status;
 
 #ifdef __cplusplus
