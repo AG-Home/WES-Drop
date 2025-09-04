@@ -14,6 +14,7 @@ set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/src/stm32l0xx_hal_msp.c     # Hardware abstraction layer (HAL) MSP functions
     ${CMAKE_CURRENT_SOURCE_DIR}/src/stm32l0xx_it.c          # Interrupt handler
     ${CMAKE_CURRENT_SOURCE_DIR}/src/system_stm32l0xx.c      # System initialization
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/wes.c                   # WES application code
     ${CMAKE_CURRENT_SOURCE_DIR}/src/startup.c               # Startup code
     ${CMAKE_CURRENT_SOURCE_DIR}/src/system_clock.c          # clock configuration
 )
