@@ -1,4 +1,4 @@
-name: Build STM32L0xx Template
+name: Build WES-Drop
 
 on:
   push:
@@ -21,7 +21,10 @@ jobs:
         run: git config --global --add safe.directory $GITHUB_WORKSPACE
 
       - name: Update submodules
-        run: git submodule update --init --recursive --remote -f
+        run: git submodule update --init --recursive -f
+        
+      - name: Show submodule commit
+        run: git submodule status
 
       - name: Run build
         run: |

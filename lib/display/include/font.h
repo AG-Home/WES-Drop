@@ -1,34 +1,34 @@
 /**********************************************************************************************************************
- * \file template_app.c
+ * \file font.h
  *
- * \author MarcoAAG
+ * \author  Marco Aguilar
  *
- * \date April-18-2025
+ * \date Sep-01-2025
  *
  * \version 1.0 \n \n
  *
  *********************************************************************************************************************/
 
-#include <stm32l0xx_hal.h>
-#include <system_clock.h>
+#ifndef FONT_H
+#define FONT_H
+
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-int main()
+typedef struct
 {
-  HAL_Init();
+  const void* p_data; // font
+  uint8_t     u_charWidth;
+  uint8_t     u_charHeight;
+} Font_t;
 
-  // Configure the system clock to 2 MHz
-  SYSTEMCLOCK_v_Config();
-
-  // Infinite loop
-  while(1)
-  {
-  }
-}
+extern const uint32_t FONT32x56[];
 
 #ifdef __cplusplus
 }
 #endif
+
+#endif // FONT_H

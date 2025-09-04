@@ -1,11 +1,10 @@
 # STM32L0xx_Template
 
-[![Latest Release](https://img.shields.io/github/v/release/STM32-Libraries/STM32L0xx_Template?label=release&color=4caf50)](https://github.com/STM32-Libraries/STM32L0xx_Template/releases/latest)
-[![Last Commit](https://img.shields.io/github/last-commit/STM32-Libraries/STM32L0xx_Template?color=ff9800)](https://github.com/STM32-Libraries/STM32L0xx_Template/commits/main)
-[![Build](https://github.com/STM32-Libraries/STM32L0xx_Template/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/STM32-Libraries/STM32L0xx_Template/actions/workflows/build.yml)
+[![Latest Release](https://img.shields.io/github/v/release/AG-Home/WES-SW?label=release&color=4caf50)](https://github.com/AG-Home/WES-SW/releases/latest)
+[![Last Commit](https://img.shields.io/github/last-commit/AG-Home/WES-SW?color=ff9800)](https://github.com/AG-Home/WES-SW/commits/main)
+[![Build](https://github.com/AG-Home/WES-SW/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/AG-Home/WES-SW/actions/workflows/build.yml)
 
-CMake-ready version of the STM32 HAL driver for STM32L0 series microcontrollers.
-
+WES Water Echo System
 ---
 
 ## 🧩 Overview
@@ -19,7 +18,7 @@ It is designed to simplify integration into modern bare-metal embedded projects 
 
 ## Clone repo
 ```
-git clone --recurse-submodules git@github.com:STM32-Libraries/STM32L0xx_Template.git 
+git clone --recurse-submodules git@github.com:AG-Home/WES-SW.git 
 ```
 
 ---
@@ -30,20 +29,13 @@ https://marco-aguilar.gitbook.io/stm32l0-setup/dev-tools
 
 ---
 
-## 🚀 Building the HAL Library
-Run scripts/build.sh script
+## 🚀 Building
+Run scripts/build.sh
 
 ---
 
 ## 📜 License
 
 ---
-## 🤝 Contributing
-Contributions are welcome! You can:
 
-Report issues
-
-Suggest improvements
-
-Submit pull requests (e.g., new features, bug fixes, CMake enhancements)
 
