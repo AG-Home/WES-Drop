@@ -17,8 +17,10 @@
 extern "C" {
 #endif
 
-Display_Object t_displayObj;
-Level_Object   t_levelObj;
+Display_Object     t_displayObj;
+Level_Object       t_levelObj;
+
+static void WES_v_ErrHandling(void);
 
 void WES_v_Init(void)
 {
@@ -29,7 +31,7 @@ void WES_v_Init(void)
   t_levelObj.t_uartParams.t_parameters.Parity     = UART_PARITY_NONE;
   t_levelObj.t_uartParams.t_parameters.HwFlowCtl  = UART_HWCONTROL_NONE;
   t_levelObj.t_uartParams.t_parameters.Mode       = UART_MODE_TX_RX;
-  ;
+  t_levelObj.e_mode                               = MODE4;
 
   LEVEL_e_Init(&t_levelObj);
   DISPLAY_e_Init(&t_displayObj);
@@ -37,7 +39,25 @@ void WES_v_Init(void)
 
 void WES_v_RunApp(void)
 {
-  DISPLAY_e_ShowLevel(&t_displayObj, 15);
+  uint8_t        level;
+  static uint8_t u_errCntr;
+  if(LEVEL_e_GetLevel(&t_levelObj, &level) != LEVEL_OK)
+  {
+    u_errCntr++;
+  }
+  if(DISPLAY_e_ShowLevel(&t_displayObj, level) != DISPLAY_OK)
+  {
+    u_errCntr++;
+  }
+  if(u_errCntr > 20)
+  {
+    WES_v_ErrHandling();
+  }
+}
+
+static void WES_v_ErrHandling(void)
+{
+  while(1);
 }
 
 #ifdef __cplusplus

@@ -32,7 +32,7 @@ LEVEL_Status LEVEL_e_Init(Level_Object* p_obj)
 
 LEVEL_Status LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level)
 {
-  LEVEL_Status e_retVal;
+  LEVEL_Status e_retVal = LEVEL_OK;
   uint16_t     u_distance;
   uint32_t     u_distanceRes;
   uint32_t     u_tmp;
@@ -58,7 +58,7 @@ LEVEL_Status LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level)
     *pu_level     = u_tmp / PACE_PERCENTAGE;
   }
 
-  return e_retVal;
+  return e_retVal;  
 }
 
 #ifdef __cplusplus

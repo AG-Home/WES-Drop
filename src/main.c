@@ -25,11 +25,11 @@ int main()
   // Configure the system clock to 2 MHz
   SYSTEMCLOCK_v_Config();
 
-  WES_v_RunApp();
-
   // Infinite loop
   while(1)
   {
+    WES_v_RunApp();
+    HAL_Delay(100);
   }
 }
 
