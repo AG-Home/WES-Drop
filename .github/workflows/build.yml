@@ -31,3 +31,7 @@ jobs:
           export CC=arm-none-eabi-gcc
           export CXX=arm-none-eabi-g++
           scripts/build.sh
+      
+      - name: Run Tests
+        run: |
+          scripts/run_tests.sh
