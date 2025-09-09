@@ -1,38 +1,27 @@
 /**********************************************************************************************************************
- * \file main.c
+ * \file wes.h
  *
  * \author MarcoAAG
  *
- * \date April-18-2025
+ * \date Sep-04-2025
  *
  * \version 1.0 \n \n
  *
  *********************************************************************************************************************/
 
-#include <stm32l0xx_hal.h>
-#include <system_clock.h>
-#include <wes.h>
+#ifndef WES_H
+#define WES_H
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-int main()
-{
-  HAL_Init();
-  WES_v_Init();
+void WES_v_Init(void);
 
-  // Configure the system clock to 2 MHz
-  SYSTEMCLOCK_v_Config();
-
-  // Infinite loop
-  while(1)
-  {
-    WES_v_RunApp();
-    HAL_Delay(100);
-  }
-}
+void WES_v_RunApp(void);
 
 #ifdef __cplusplus
 }
 #endif
+
+#endif // WES_H
