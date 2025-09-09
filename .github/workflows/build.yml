@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/stm32-libraries/stm32l0xx-ci-docker:latest
+      image: ghcr.io/stm32-libraries/wes-drop:latest
 
     steps:
       - name: Checkout code
@@ -31,3 +31,7 @@ jobs:
           export CC=arm-none-eabi-gcc
           export CXX=arm-none-eabi-g++
           scripts/build.sh
+      
+      - name: Run Tests
+        run: |
+          scripts/run_tests.sh
