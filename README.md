@@ -18,7 +18,7 @@ It is designed to simplify integration into modern bare-metal embedded projects 
 
 ## Clone repo
 ```
-git clone --recurse-submodules git@github.com:AG-Home/WES-SW.git 
+git clone --recurse-submodules git@github.com:AG-Home/WES-Drop.git 
 ```
 
 ---
