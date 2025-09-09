@@ -10,6 +10,7 @@
  *********************************************************************************************************************/
 
 #include <display.h>
+#include <error_handler.h>
 #include <level.h>
 #include <wes.h>
 
@@ -17,10 +18,9 @@
 extern "C" {
 #endif
 
-Display_Object t_displayObj;
-Level_Object   t_levelObj;
-
-static void WES_v_ErrHandling(void);
+Display_Object    t_displayObj;
+Level_Object      t_levelObj;
+WES_ErrorHandler* t_errorIntance;
 
 void WES_v_Init(void)
 {
@@ -35,29 +35,22 @@ void WES_v_Init(void)
 
   LEVEL_e_Init(&t_levelObj);
   DISPLAY_e_Init(&t_displayObj);
+  ERRH_v_Init(t_errorIntance);
 }
 
 void WES_v_RunApp(void)
 {
-  uint8_t        level;
-  static uint8_t u_errCntr;
+  uint8_t level;
+
+  t_errorIntance->setError(ERR_NONE); // clear error;
   if(LEVEL_e_GetLevel(&t_levelObj, &level) != LEVEL_OK)
   {
-    u_errCntr++;
+    t_errorIntance->setError(ERR_LEVEL);
   }
   if(DISPLAY_e_ShowLevel(&t_displayObj, level) != DISPLAY_OK)
   {
-    u_errCntr++;
+    t_errorIntance->setError(ERR_DISPLAY);
   }
-  if(u_errCntr > 20)
-  {
-    WES_v_ErrHandling();
-  }
-}
-
-static void WES_v_ErrHandling(void)
-{
-  while(1);
 }
 
 #ifdef __cplusplus
