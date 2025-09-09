@@ -15,11 +15,13 @@
 extern "C" {
 #endif
 
-#define CM_TO_MM(x)     (x * 10)
-#define MIN_MEAS        CM_TO_MM(25)  // 30cm
-#define MAX_MEAS        CM_TO_MM(148) // 148cm
-#define CAPACITY        MAX_MEAS - MIN_MEAS
-#define PACE_PERCENTAGE CAPACITY
+#define MIN_MEAS 25
+#define MAX_MEAS 145
+
+static const uint32_t u_MIN_MEAS        = MIN_MEAS * 10U;
+static const uint32_t u_MAX_MEAS        = MAX_MEAS * 10U;
+static const uint32_t u_CAPACITY        = u_MAX_MEAS - u_MIN_MEAS;
+static const uint32_t u_PACE_PERCENTAGE = u_CAPACITY;
 
 LEVEL_Status LEVEL_e_Init(Level_Object* p_obj)
 {
@@ -44,21 +46,21 @@ LEVEL_Status LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level)
 
   if(e_retVal == LEVEL_OK)
   {
-    if(u_distance < MIN_MEAS)
+    if(u_distance < u_MIN_MEAS)
     {
-      u_distance = MIN_MEAS;
+      u_distance = u_MIN_MEAS;
     }
-    if(u_distance > MAX_MEAS)
+    else if(u_distance > u_MAX_MEAS)
     {
-      u_distance = MAX_MEAS;
+      u_distance = u_MAX_MEAS;
     }
 
-    u_distanceRes = u_distance * 100;
-    u_tmp         = (MAX_MEAS * 100) - u_distanceRes;
-    *pu_level     = u_tmp / PACE_PERCENTAGE;
+    u_distanceRes = (uint32_t)u_distance * 100u;
+    u_tmp         = (u_MAX_MEAS * 100U) - u_distanceRes;
+    *pu_level     = u_tmp / u_PACE_PERCENTAGE;
   }
 
-  return e_retVal;  
+  return e_retVal;
 }
 
 #ifdef __cplusplus

@@ -54,7 +54,7 @@ LEVEL_Status SR04M_InitInterface(SR04M_Object* tp_obj, LEVEL_UART_PARAMS* tp_uar
 
 static uint32_t SR04M_WriteCommand(uint8_t* pData, uint8_t Length)
 {
-  HAL_UART_Transmit(&UartHandle, pData, Length, 100);
+  HAL_UART_Transmit(&UartHandle, pData, Length, 10);
   return 0;
 }
 

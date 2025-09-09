@@ -17,8 +17,8 @@
 extern "C" {
 #endif
 
-Display_Object     t_displayObj;
-Level_Object       t_levelObj;
+Display_Object t_displayObj;
+Level_Object   t_levelObj;
 
 static void WES_v_ErrHandling(void);
 
