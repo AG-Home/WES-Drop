@@ -14,7 +14,7 @@ void test_ERRH_t_Init(void)
   WES_ErrorCode     e_retVal;
   WES_ErrorHandler* t_testObj = ERRH_t_Init();
   e_retVal                    = t_testObj->getError();
-  TEST_ASSERT_EQUAL(e_retVal, ERR_LEVEL);
+  TEST_ASSERT_EQUAL(e_retVal, ERR_NONE);
 }
 
 void test_ERRH_t_LevelClearError(void)
