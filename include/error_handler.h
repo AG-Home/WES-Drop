@@ -38,7 +38,7 @@ struct WES_ErrorHandler {
   GetErrorFunc getError;
 };
 
-void ERRH_v_Init(WES_ErrorHandler* pt_handler);
+WES_ErrorHandler* ERRH_t_Init(void);
 
 #ifdef __cplusplus
 }

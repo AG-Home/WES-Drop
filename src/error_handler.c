@@ -30,11 +30,11 @@ static uint8_t          u_cntrLevelErr;
 static WES_ErrorCode    e_currentError;
 static WES_ErrorHandler t_obj;
 
-void ERRH_v_Init(WES_ErrorHandler* pt_handler)
+WES_ErrorHandler* ERRH_t_Init(void)
 {
-  t_obj          = *pt_handler;
   t_obj.setError = ERRH_v_SetError;
   t_obj.getError = ERRH_t_GetError;
+  return &t_obj;
 }
 
 static void ERRH_v_SetError(WES_ErrorCode t_err)
@@ -65,9 +65,11 @@ static void ERRH_v_Handle(void)
       break;
     case ERR_DISPLAY_CLEAR:
       u_cntrDisplayErr = 0u;
+      e_currentError   = ERR_NONE; // clear error
       break;
     case ERR_LEVEL_CLEAR:
       u_cntrLevelErr = 0u;
+      e_currentError = ERR_NONE; // clear error
       break;
     default:
       break;

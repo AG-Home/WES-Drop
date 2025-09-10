@@ -33,7 +33,7 @@ void WES_v_Init(void)
   DISPLAY_Status e_displayStatus;
   uint8_t        u_attemps = 0u;
 
-  ERRH_v_Init(t_errorInstance);
+  t_errorInstance = ERRH_t_Init();
 
   t_levelObj.t_uartParams.pt_instance             = USART2;
   t_levelObj.t_uartParams.t_parameters.BaudRate   = BAUDRATE;
