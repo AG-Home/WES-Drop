@@ -20,10 +20,12 @@ extern "C" {
 
 typedef enum
 {
-  ERR_NONE    = 0,
-  ERR_LEVEL   = -1,
-  ERR_DISPLAY = -2,
-  ERR_FATAL   = -3
+  ERR_DISPLAY_CLEAR = 2,
+  ERR_LEVEL_CLEAR   = 1,
+  ERR_NONE          = 0,
+  ERR_LEVEL         = -1,
+  ERR_DISPLAY       = -2,
+  ERR_FATAL         = -3
 } WES_ErrorCode;
 
 typedef struct WES_ErrorHandler WES_ErrorHandler;
@@ -32,9 +34,8 @@ typedef void (*SetErrorFunc)(WES_ErrorCode);
 typedef WES_ErrorCode (*GetErrorFunc)(void);
 
 struct WES_ErrorHandler {
-  WES_ErrorCode currentError;
-  SetErrorFunc  setError;
-  GetErrorFunc  getError;
+  SetErrorFunc setError;
+  GetErrorFunc getError;
 };
 
 void ERRH_v_Init(WES_ErrorHandler* pt_handler);

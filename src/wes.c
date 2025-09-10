@@ -18,14 +18,25 @@
 extern "C" {
 #endif
 
+#define BAUDRATE                 9600u
+#define MAX_LEVEL_INIT_ATTEMPS   5u
+#define MAX_DISPLAY_INIT_ATTEMPS 5u
+#define DELAY_ATTEMPS            20u
+
 Display_Object    t_displayObj;
 Level_Object      t_levelObj;
-WES_ErrorHandler* t_errorIntance;
+WES_ErrorHandler* t_errorInstance;
 
 void WES_v_Init(void)
 {
+  LEVEL_Status   e_levelStatus;
+  DISPLAY_Status e_displayStatus;
+  uint8_t        u_attemps = 0u;
+
+  ERRH_v_Init(t_errorInstance);
+
   t_levelObj.t_uartParams.pt_instance             = USART2;
-  t_levelObj.t_uartParams.t_parameters.BaudRate   = 9600;
+  t_levelObj.t_uartParams.t_parameters.BaudRate   = BAUDRATE;
   t_levelObj.t_uartParams.t_parameters.WordLength = UART_WORDLENGTH_8B;
   t_levelObj.t_uartParams.t_parameters.StopBits   = UART_STOPBITS_1;
   t_levelObj.t_uartParams.t_parameters.Parity     = UART_PARITY_NONE;
@@ -33,23 +44,74 @@ void WES_v_Init(void)
   t_levelObj.t_uartParams.t_parameters.Mode       = UART_MODE_TX_RX;
   t_levelObj.e_mode                               = MODE4;
 
-  LEVEL_e_Init(&t_levelObj);
-  DISPLAY_e_Init(&t_displayObj);
-  ERRH_v_Init(t_errorIntance);
+  e_levelStatus = LEVEL_e_Init(&t_levelObj);
+  if(e_levelStatus != LEVEL_OK)
+  {
+    while(e_levelStatus != LEVEL_OK && u_attemps < MAX_LEVEL_INIT_ATTEMPS)
+    {
+      t_errorInstance->setError(ERR_LEVEL);
+      e_levelStatus = LEVEL_e_Init(&t_levelObj);
+      u_attemps++;
+      if(u_attemps >= MAX_LEVEL_INIT_ATTEMPS)
+      {
+        t_errorInstance->setError(ERR_FATAL);
+      }
+      HAL_Delay(DELAY_ATTEMPS);
+    }
+  }
+  else
+  {
+    e_displayStatus = DISPLAY_e_Init(&t_displayObj);
+    u_attemps       = 0u;
+    while(e_displayStatus != DISPLAY_OK && u_attemps < MAX_DISPLAY_INIT_ATTEMPS)
+    {
+      t_errorInstance->setError(ERR_DISPLAY);
+      e_displayStatus = DISPLAY_e_Init(&t_displayObj);
+      u_attemps++;
+      if(u_attemps >= MAX_DISPLAY_INIT_ATTEMPS)
+      {
+        t_errorInstance->setError(ERR_FATAL);
+      }
+      HAL_Delay(DELAY_ATTEMPS);
+    }
+  }
 }
 
 void WES_v_RunApp(void)
 {
-  uint8_t level;
+  LEVEL_Status   e_levelStatus;
+  DISPLAY_Status e_displayStatus;
+  static uint8_t u_prevLevel;
+  static uint8_t u_level;
 
-  t_errorIntance->setError(ERR_NONE); // clear error;
-  if(LEVEL_e_GetLevel(&t_levelObj, &level) != LEVEL_OK)
+  e_levelStatus = LEVEL_e_GetLevel(&t_levelObj, &u_level);
+
+  if(e_levelStatus == LEVEL_OK)
   {
-    t_errorIntance->setError(ERR_LEVEL);
+    u_prevLevel = u_level;
+    t_errorInstance->setError(ERR_LEVEL_CLEAR);
+    e_displayStatus = DISPLAY_e_ShowLevel(&t_displayObj, u_level);
+    if(e_displayStatus == DISPLAY_OK)
+    {
+      t_errorInstance->setError(ERR_DISPLAY_CLEAR);
+    }
+    else
+    {
+      t_errorInstance->setError(ERR_DISPLAY);
+    }
   }
-  if(DISPLAY_e_ShowLevel(&t_displayObj, level) != DISPLAY_OK)
+  else
   {
-    t_errorIntance->setError(ERR_DISPLAY);
+    t_errorInstance->setError(ERR_LEVEL);
+    e_displayStatus = DISPLAY_e_ShowLevel(&t_displayObj, u_prevLevel); // Remains the previous value
+    if(e_displayStatus == DISPLAY_OK)
+    {
+      t_errorInstance->setError(ERR_DISPLAY_CLEAR);
+    }
+    else
+    {
+      t_errorInstance->setError(ERR_DISPLAY);
+    }
   }
 }
 
