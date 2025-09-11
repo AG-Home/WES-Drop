@@ -14,6 +14,27 @@
           "svdFile": "/home/marco/Tools/svd/STM32L0_svd_v1r4/STM32L0x1.svd",
           "preLaunchTask": "build-project",
           "runToEntryPoint": "main"
+      },
+      {
+        "name": "Debug Ceedling Test",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/test/out/test_error_handler/test_error_handler.out",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ]
       }
+
   ]
 }

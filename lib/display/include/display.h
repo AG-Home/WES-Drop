@@ -34,9 +34,9 @@ typedef struct
 /*                                         Public Functions                                       */
 /* ============================================================================================== */
 
-DISPLAY_ERROR DISPLAY_e_Init(Display_Object* p_obj);
+DISPLAY_Status DISPLAY_e_Init(Display_Object* p_obj);
 
-DISPLAY_ERROR DISPLAY_e_ShowLevel(Display_Object* p_obj, uint8_t u_percentage);
+DISPLAY_Status DISPLAY_e_ShowLevel(Display_Object* p_obj, uint8_t u_percentage);
 
 #ifdef __cplusplus
 }

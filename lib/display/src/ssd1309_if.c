@@ -53,9 +53,9 @@ I2C_HandleTypeDef t_iicHandle;
 /*                                         Public Functions                                       */
 /* ============================================================================================== */
 
-DISPLAY_ERROR SSD1309_InitInterface(SSD1315_Object_t* tp_obj)
+DISPLAY_Status SSD1309_InitInterface(SSD1315_Object_t* tp_obj)
 {
-  DISPLAY_ERROR e_retVal            = DISPLAY_OK;
+  DISPLAY_Status e_retVal           = DISPLAY_OK;
   t_iicHandle.Instance              = I2Cx;
   t_iicHandle.Init.Timing           = I2C_TIMING;
   t_iicHandle.Init.OwnAddress1      = I2C_ADDRESS;

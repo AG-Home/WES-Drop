@@ -26,7 +26,7 @@ extern "C" {
 /*                                         Public Functions                                       */
 /* ============================================================================================== */
 
-DISPLAY_ERROR SSD1309_InitInterface(SSD1315_Object_t* tp_obj);
+DISPLAY_Status SSD1309_InitInterface(SSD1315_Object_t* tp_obj);
 
 #ifdef __cplusplus
 }

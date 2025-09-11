@@ -22,9 +22,9 @@ static void DISPLAY_v_GetCenteredCoords(const char* p_str, const Font_t* t_font,
 static void DISPLAY_v_DrawChar(SSD1315_Object_t* t_pObj, uint8_t u_posX, uint8_t u_posY, char c_char, const Font_t* t_font);
 static void DISPLAY_v_DrawString(SSD1315_Object_t* p_obj, uint8_t u_posX, uint8_t u_posY, const char* p_str, const Font_t* t_font);
 
-DISPLAY_ERROR DISPLAY_e_Init(Display_Object* p_obj)
+DISPLAY_Status DISPLAY_e_Init(Display_Object* p_obj)
 {
-  DISPLAY_ERROR e_retVal;
+  DISPLAY_Status e_retVal;
 
   p_obj->t_font.p_data       = FONT32x56;
   p_obj->t_font.u_charHeight = 56;
@@ -35,11 +35,11 @@ DISPLAY_ERROR DISPLAY_e_Init(Display_Object* p_obj)
   return e_retVal;
 }
 
-DISPLAY_ERROR DISPLAY_e_ShowLevel(Display_Object* p_obj, uint8_t u_percentage)
+DISPLAY_Status DISPLAY_e_ShowLevel(Display_Object* p_obj, uint8_t u_percentage)
 {
-  DISPLAY_ERROR e_retVal = DISPLAY_OK;
-  char          str_percentage[5];
-  uint8_t       u_digits, u_posX, u_posY;
+  DISPLAY_Status e_retVal = DISPLAY_OK;
+  char           str_percentage[5];
+  uint8_t        u_digits, u_posX, u_posY;
 
   if(u_percentage > 100)
   {
