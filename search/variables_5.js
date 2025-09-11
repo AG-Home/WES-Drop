@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['handle_0',['handle',['../structSR04M__CTX.html#a3df6ca32c0ba402a5c726e6c45760684',1,'SR04M_CTX']]]
+  ['geterror_0',['getError',['../structWES__ErrorHandler.html#afdbbdcadfc2254aab9b7fff267130ed1',1,'WES_ErrorHandler']]]
 ];

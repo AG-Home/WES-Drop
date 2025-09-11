@@ -1,7 +1,20 @@
 var searchData=
 [
-  ['font_2ec_0',['font.c',['../font_8c.html',1,'']]],
-  ['font_2eh_1',['font.h',['../font_8h.html',1,'']]],
-  ['font32x56_2',['FONT32x56',['../font_8h.html#a56c8692fcae95f4b0f6c7904d5c20491',1,'FONT32x56:&#160;font.c'],['../font_8c.html#a56c8692fcae95f4b0f6c7904d5c20491',1,'FONT32x56:&#160;font.c']]],
-  ['font_5ft_3',['Font_t',['../structFont__t.html',1,'']]]
+  ['e_5fcurrenterror_0',['e_currentError',['../error__handler_8c.html#a5cb8a199a1a6818472f24dc08b14eb28',1,'error_handler.c']]],
+  ['e_5fmode_1',['e_mode',['../structLevel__Object.html#a6e754e1255af4b2e9f9c3e0e2573c69b',1,'Level_Object']]],
+  ['err_5fdisplay_2',['ERR_DISPLAY',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748ac5616ab3a6dbc398433d4ace3c25f9fc',1,'error_handler.h']]],
+  ['err_5fdisplay_5fclear_3',['ERR_DISPLAY_CLEAR',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748afbeb6122b5827c22ac8eac7ffbbe5021',1,'error_handler.h']]],
+  ['err_5ffatal_4',['ERR_FATAL',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748a182e80681e784dc5d8dbb1897617bd6e',1,'error_handler.h']]],
+  ['err_5flevel_5',['ERR_LEVEL',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748a38a4b0a41099f7c0165b548368a09ade',1,'error_handler.h']]],
+  ['err_5flevel_5fclear_6',['ERR_LEVEL_CLEAR',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748a2d13e153b7f303fd3427400c8bd400d3',1,'error_handler.h']]],
+  ['err_5fnone_7',['ERR_NONE',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748a5203071ca85e00df6bf2526855b6df0d',1,'error_handler.h']]],
+  ['errh_5ft_5fgeterror_8',['ERRH_t_GetError',['../error__handler_8c.html#aded13720d70db7beecaf3a5ffa3e26e3',1,'error_handler.c']]],
+  ['errh_5ft_5finit_9',['ERRH_t_Init',['../error__handler_8c.html#a116babe4c623fc9a0e3932ab2cbb639a',1,'ERRH_t_Init(void):&#160;error_handler.c'],['../error__handler_8h.html#a116babe4c623fc9a0e3932ab2cbb639a',1,'ERRH_t_Init(void):&#160;error_handler.c']]],
+  ['errh_5fv_5fdisplayerrhandler_10',['ERRH_v_DisplayErrHandler',['../error__handler_8c.html#a98795aff8295710d4972c841c30e5e0a',1,'error_handler.c']]],
+  ['errh_5fv_5ffatalerrhandler_11',['ERRH_v_FatalErrHandler',['../error__handler_8c.html#a1e87e1c29fc36ecb39f14f4017ea1685',1,'error_handler.c']]],
+  ['errh_5fv_5fhandle_12',['ERRH_v_Handle',['../error__handler_8c.html#a6bc6116fa6a4f68843fb91a038672033',1,'error_handler.c']]],
+  ['errh_5fv_5flevelerrhandler_13',['ERRH_v_LevelErrHandler',['../error__handler_8c.html#a803aca53b31b7380e80c37fc3b1d8362',1,'error_handler.c']]],
+  ['errh_5fv_5fseterror_14',['ERRH_v_SetError',['../error__handler_8c.html#a4b790e88115674dacbe37bd89fc36a5f',1,'error_handler.c']]],
+  ['error_5fhandler_2ec_15',['error_handler.c',['../error__handler_8c.html',1,'']]],
+  ['error_5fhandler_2eh_16',['error_handler.h',['../error__handler_8h.html',1,'']]]
 ];

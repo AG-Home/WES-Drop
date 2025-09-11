@@ -1,17 +1,12 @@
 var searchData=
 [
-  ['level_20io_20interface_0',['SR04M Low-Level IO Interface',['../group__SR04M__IO__Interface.html',1,'']]],
-  ['level_2ec_1',['level.c',['../level_8c.html',1,'']]],
-  ['level_2eh_2',['level.h',['../level_8h.html',1,'']]],
-  ['level_5fe_5fgetlevel_3',['LEVEL_e_GetLevel',['../level_8h.html#a145de35f7c4764504f93df191f5ec814',1,'LEVEL_e_GetLevel(Level_Object *p_obj, uint8_t *pu_level):&#160;level.c'],['../level_8c.html#a145de35f7c4764504f93df191f5ec814',1,'LEVEL_e_GetLevel(Level_Object *p_obj, uint8_t *pu_level):&#160;level.c']]],
-  ['level_5fe_5finit_4',['LEVEL_e_Init',['../level_8h.html#ad57b237874fdb0d067008bb397531336',1,'LEVEL_e_Init(Level_Object *p_obj):&#160;level.c'],['../level_8c.html#ad57b237874fdb0d067008bb397531336',1,'LEVEL_e_Init(Level_Object *p_obj):&#160;level.c']]],
-  ['level_5ferr_5fdistance_5',['LEVEL_ERR_DISTANCE',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a5a697dbd14fdda8eb2e6584da43e2e45',1,'level_errors.h']]],
-  ['level_5ferr_5finit_6',['LEVEL_ERR_INIT',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a60a51d9be5eb5b2485e203c32aa30b80',1,'level_errors.h']]],
-  ['level_5ferr_5fuart_7',['LEVEL_ERR_UART',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1aef25c503a4acfb9500412523bfbdcd0c',1,'level_errors.h']]],
-  ['level_5ferrors_2eh_8',['level_errors.h',['../level__errors_8h.html',1,'']]],
-  ['level_5fobject_9',['Level_Object',['../structLevel__Object.html',1,'']]],
-  ['level_5fok_10',['LEVEL_OK',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a6a10b1aae009c0ad97a713705b146d1c',1,'level_errors.h']]],
-  ['level_5fstatus_11',['LEVEL_Status',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1',1,'level_errors.h']]],
-  ['level_5fuart_5fparams_12',['LEVEL_UART_PARAMS',['../structLEVEL__UART__PARAMS.html',1,'']]],
-  ['low_20level_20io_20interface_13',['SR04M Low-Level IO Interface',['../group__SR04M__IO__Interface.html',1,'']]]
+  ['hal_5fi2c_5fmspdeinit_0',['HAL_I2C_MspDeInit',['../group__HAL__MSP__Private__Functions.html#ga2ec8d9b09854c732e2feed549278f048',1,'stm32l0xx_hal_msp.c']]],
+  ['hal_5fi2c_5fmspinit_1',['HAL_I2C_MspInit',['../group__HAL__MSP__Private__Functions.html#gabe01a202c27b23fc150aa66af3130073',1,'stm32l0xx_hal_msp.c']]],
+  ['hal_5fmsp_5fprivate_5ffunctions_2',['HAL_MSP_Private_Functions',['../group__HAL__MSP__Private__Functions.html',1,'']]],
+  ['hal_5fuart_5fmspdeinit_3',['HAL_UART_MspDeInit',['../group__HAL__MSP__Private__Functions.html#ga718f39804e3b910d738a0e1e46151188',1,'stm32l0xx_hal_msp.c']]],
+  ['hal_5fuart_5fmspinit_4',['HAL_UART_MspInit',['../group__HAL__MSP__Private__Functions.html#ga0e553b32211877322f949b14801bbfa7',1,'stm32l0xx_hal_msp.c']]],
+  ['handle_5',['handle',['../structSR04M__CTX.html#a3df6ca32c0ba402a5c726e6c45760684',1,'SR04M_CTX']]],
+  ['hardfault_5fhandler_6',['HardFault_Handler',['../stm32l0xx__it_8c.html#a2bffc10d5bd4106753b7c30e86903bea',1,'HardFault_Handler(void):&#160;stm32l0xx_it.c'],['../stm32l0xx__it_8h.html#a2bffc10d5bd4106753b7c30e86903bea',1,'HardFault_Handler(void):&#160;stm32l0xx_it.c']]],
+  ['hse_5fvalue_7',['HSE_VALUE',['../system__stm32l0xx_8c.html#aeafcff4f57440c60e64812dddd13e7cb',1,'system_stm32l0xx.c']]],
+  ['hsi_5fvalue_8',['HSI_VALUE',['../system__stm32l0xx_8c.html#aaa8c76e274d0f6dd2cefb5d0b17fbc37',1,'system_stm32l0xx.c']]]
 ];

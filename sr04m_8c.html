@@ -91,8 +91,7 @@ $(function(){ initResizable(false); });
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">sr04m.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -108,6 +107,8 @@ Macros</h2></td></tr>
 <tr class="separator:a9732bbd7f00ac8d4ed8601a6b14a8b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37f694e5e2b1377b51199a4ef551d971" id="r_a37f694e5e2b1377b51199a4ef551d971"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37f694e5e2b1377b51199a4ef551d971">MODE5_RX_LEN</a>&#160;&#160;&#160;12</td></tr>
 <tr class="separator:a37f694e5e2b1377b51199a4ef551d971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea01acf74e8a308de5af3d6b0fa7a2a" id="r_aaea01acf74e8a308de5af3d6b0fa7a2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaea01acf74e8a308de5af3d6b0fa7a2a">MODE4_RX_LEN</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:aaea01acf74e8a308de5af3d6b0fa7a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a001791a21d538b8b9176287ae60d9b61" id="r_a001791a21d538b8b9176287ae60d9b61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a001791a21d538b8b9176287ae60d9b61">MAX_DIGITS</a>&#160;&#160;&#160;5</td></tr>
 <tr class="separator:a001791a21d538b8b9176287ae60d9b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb967327496047b9c600bc6b4de96b7d" id="r_aeb967327496047b9c600bc6b4de96b7d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb967327496047b9c600bc6b4de96b7d">MIN_DIGITS</a>&#160;&#160;&#160;4</td></tr>
@@ -137,17 +138,14 @@ Functions</h2></td></tr>
 <tr class="separator:ac2a2f689193eaf9d646dfed126a224f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66b122cf909d6ddb4eb324f90a28c27e" id="r_a66b122cf909d6ddb4eb324f90a28c27e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sr04m_8h.html#a59ca6f39b70e171b9f1f4f738ab69788">SR04M_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a66b122cf909d6ddb4eb324f90a28c27e">SR04M_t_StrValidator</a> (const char *pu_str, uint8_t *pu_arr, uint8_t u_startIndex, uint8_t u_endIndex)</td></tr>
 <tr class="separator:a66b122cf909d6ddb4eb324f90a28c27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9c944e0e799c6d194f9a0f7827f8d9e" id="r_aa9c944e0e799c6d194f9a0f7827f8d9e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="sr04m_8h.html#a59ca6f39b70e171b9f1f4f738ab69788">SR04M_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa9c944e0e799c6d194f9a0f7827f8d9e">SR04M_t_SerialModeLP</a> (<a class="el" href="structSR04M__Object.html">SR04M_Object</a> *p_obj, uint16_t *u_distance)</td></tr>
+<tr class="separator:aa9c944e0e799c6d194f9a0f7827f8d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8535eb9ef4ab9d2a8237b2491d8a94ff" id="r_a8535eb9ef4ab9d2a8237b2491d8a94ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sr04m_8h.html#a59ca6f39b70e171b9f1f4f738ab69788">SR04M_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8535eb9ef4ab9d2a8237b2491d8a94ff">SR04M_u_Init</a> (<a class="el" href="structSR04M__Object.html">SR04M_Object</a> *p_obj, <a class="el" href="structSR04M__IO.html">SR04M_IO</a> *p_io)</td></tr>
 <tr class="memdesc:a8535eb9ef4ab9d2a8237b2491d8a94ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the SR04M driver instance.  <br /></td></tr>
 <tr class="separator:a8535eb9ef4ab9d2a8237b2491d8a94ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aced19f71f7d8eff4fcc49d56ef132a38" id="r_aced19f71f7d8eff4fcc49d56ef132a38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sr04m_8h.html#a59ca6f39b70e171b9f1f4f738ab69788">SR04M_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aced19f71f7d8eff4fcc49d56ef132a38">SR04M_u_GetDistance</a> (<a class="el" href="structSR04M__Object.html">SR04M_Object</a> *p_obj, uint16_t *u_distance, <a class="el" href="sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7">SR04M_Modes</a> te_mode)</td></tr>
 <tr class="memdesc:aced19f71f7d8eff4fcc49d56ef132a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Measures and returns the distance detected by the SR04M sensor.  <br /></td></tr>
 <tr class="separator:aced19f71f7d8eff4fcc49d56ef132a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a473d739845c412140f8f61f4020a5a2e" id="r_a473d739845c412140f8f61f4020a5a2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7">SR04M_Modes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a473d739845c412140f8f61f4020a5a2e">e_currentMode</a> = 0</td></tr>
-<tr class="separator:a473d739845c412140f8f61f4020a5a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of the SR04M driver. </p>
@@ -197,6 +195,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define MIN_DIGITS&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaea01acf74e8a308de5af3d6b0fa7a2a" name="aaea01acf74e8a308de5af3d6b0fa7a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea01acf74e8a308de5af3d6b0fa7a2a">&#9670;&#160;</a></span>MODE4_RX_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODE4_RX_LEN&#160;&#160;&#160;4</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -277,6 +289,35 @@ Variables</h2></td></tr>
           <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>u_distance</em></span>&#160;)</td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9c944e0e799c6d194f9a0f7827f8d9e" name="aa9c944e0e799c6d194f9a0f7827f8d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c944e0e799c6d194f9a0f7827f8d9e">&#9670;&#160;</a></span>SR04M_t_SerialModeLP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="sr04m_8h.html#a59ca6f39b70e171b9f1f4f738ab69788">SR04M_Status</a> SR04M_t_SerialModeLP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structSR04M__Object.html">SR04M_Object</a> *</td>          <td class="paramname"><span class="paramname"><em>p_obj</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *</td>          <td class="paramname"><span class="paramname"><em>u_distance</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -385,21 +426,6 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a473d739845c412140f8f61f4020a5a2e" name="a473d739845c412140f8f61f4020a5a2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a473d739845c412140f8f61f4020a5a2e">&#9670;&#160;</a></span>e_currentMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7">SR04M_Modes</a> e_currentMode = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>

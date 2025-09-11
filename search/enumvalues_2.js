@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['mode1_0',['MODE1',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7ac96709e78c1f5f5e077b68b1c65d141d',1,'sr04m.h']]],
-  ['mode2_1',['MODE2',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7a7e24ffb02d34c2b3a679095809eafc55',1,'sr04m.h']]],
-  ['mode3_2',['MODE3',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7a7b316658e8633844a318cde3660e5a77',1,'sr04m.h']]],
-  ['mode4_3',['MODE4',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7a2cbc88f90cf15cbf6885c86eb1c8d984',1,'sr04m.h']]],
-  ['mode5_4',['MODE5',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7a704d84dd83547d54ebeacedd38545f6f',1,'sr04m.h']]]
+  ['level_5ferr_5fdistance_0',['LEVEL_ERR_DISTANCE',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a5a697dbd14fdda8eb2e6584da43e2e45',1,'level_errors.h']]],
+  ['level_5ferr_5finit_1',['LEVEL_ERR_INIT',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a60a51d9be5eb5b2485e203c32aa30b80',1,'level_errors.h']]],
+  ['level_5ferr_5fuart_2',['LEVEL_ERR_UART',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1aef25c503a4acfb9500412523bfbdcd0c',1,'level_errors.h']]],
+  ['level_5fok_3',['LEVEL_OK',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a6a10b1aae009c0ad97a713705b146d1c',1,'level_errors.h']]]
 ];

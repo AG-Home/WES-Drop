@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['sr04m_5ferror_0',['SR04M_ERROR',['../sr04m_8h.html#a59ca6f39b70e171b9f1f4f738ab69788aba7978f0b19ce056953f02ff4a61ccae',1,'sr04m.h']]],
-  ['sr04m_5fok_1',['SR04M_OK',['../sr04m_8h.html#a59ca6f39b70e171b9f1f4f738ab69788afb834e68e22228b237e4836d19de7e69',1,'sr04m.h']]]
+  ['mode1_0',['MODE1',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7ac96709e78c1f5f5e077b68b1c65d141d',1,'sr04m.h']]],
+  ['mode2_1',['MODE2',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7a7e24ffb02d34c2b3a679095809eafc55',1,'sr04m.h']]],
+  ['mode3_2',['MODE3',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7a7b316658e8633844a318cde3660e5a77',1,'sr04m.h']]],
+  ['mode4_3',['MODE4',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7a2cbc88f90cf15cbf6885c86eb1c8d984',1,'sr04m.h']]],
+  ['mode5_4',['MODE5',['../sr04m_8h.html#ad067ec0aceaa9c752e3577f623c6a1e7a704d84dd83547d54ebeacedd38545f6f',1,'sr04m.h']]]
 ];

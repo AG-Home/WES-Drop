@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['level_5ferr_5fdistance_0',['LEVEL_ERR_DISTANCE',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a5a697dbd14fdda8eb2e6584da43e2e45',1,'level_errors.h']]],
-  ['level_5ferr_5finit_1',['LEVEL_ERR_INIT',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a60a51d9be5eb5b2485e203c32aa30b80',1,'level_errors.h']]],
-  ['level_5ferr_5fuart_2',['LEVEL_ERR_UART',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1aef25c503a4acfb9500412523bfbdcd0c',1,'level_errors.h']]],
-  ['level_5fok_3',['LEVEL_OK',['../level__errors_8h.html#af1892553b2e5d5ee6d8554c368c21df1a6a10b1aae009c0ad97a713705b146d1c',1,'level_errors.h']]]
+  ['err_5fdisplay_0',['ERR_DISPLAY',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748ac5616ab3a6dbc398433d4ace3c25f9fc',1,'error_handler.h']]],
+  ['err_5fdisplay_5fclear_1',['ERR_DISPLAY_CLEAR',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748afbeb6122b5827c22ac8eac7ffbbe5021',1,'error_handler.h']]],
+  ['err_5ffatal_2',['ERR_FATAL',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748a182e80681e784dc5d8dbb1897617bd6e',1,'error_handler.h']]],
+  ['err_5flevel_3',['ERR_LEVEL',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748a38a4b0a41099f7c0165b548368a09ade',1,'error_handler.h']]],
+  ['err_5flevel_5fclear_4',['ERR_LEVEL_CLEAR',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748a2d13e153b7f303fd3427400c8bd400d3',1,'error_handler.h']]],
+  ['err_5fnone_5',['ERR_NONE',['../error__handler_8h.html#a5b8299d35e6a498bf4237792561c1748a5203071ca85e00df6bf2526855b6df0d',1,'error_handler.h']]]
 ];

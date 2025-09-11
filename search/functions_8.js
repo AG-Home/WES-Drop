@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['sr04m_5finitinterface_0',['SR04M_InitInterface',['../sr04m__if_8h.html#a300f4d95aa0b8534437bde80328132ff',1,'SR04M_InitInterface(SR04M_Object *tp_obj, LEVEL_UART_PARAMS *tp_uartObj):&#160;sr04m_if.c'],['../sr04m__if_8c.html#a300f4d95aa0b8534437bde80328132ff',1,'SR04M_InitInterface(SR04M_Object *tp_obj, LEVEL_UART_PARAMS *tp_uartObj):&#160;sr04m_if.c']]],
-  ['sr04m_5freaddata_1',['SR04M_ReadData',['../sr04m__if_8c.html#a3ae5fcbd1b453aababe50745f17d8913',1,'sr04m_if.c']]],
-  ['sr04m_5ft_5fprintingmode_2',['SR04M_t_PrintingMode',['../sr04m_8c.html#ac2a2f689193eaf9d646dfed126a224f1',1,'sr04m.c']]],
-  ['sr04m_5ft_5fstrvalidator_3',['SR04M_t_StrValidator',['../sr04m_8c.html#a66b122cf909d6ddb4eb324f90a28c27e',1,'sr04m.c']]],
-  ['sr04m_5fu_5fgetdistance_4',['SR04M_u_GetDistance',['../sr04m_8h.html#aced19f71f7d8eff4fcc49d56ef132a38',1,'SR04M_u_GetDistance(SR04M_Object *p_obj, uint16_t *u_distance, SR04M_Modes te_mode):&#160;sr04m.c'],['../sr04m_8c.html#aced19f71f7d8eff4fcc49d56ef132a38',1,'SR04M_u_GetDistance(SR04M_Object *p_obj, uint16_t *u_distance, SR04M_Modes te_mode):&#160;sr04m.c']]],
-  ['sr04m_5fu_5finit_5',['SR04M_u_Init',['../sr04m_8h.html#a8535eb9ef4ab9d2a8237b2491d8a94ff',1,'SR04M_u_Init(SR04M_Object *p_obj, SR04M_IO *p_io):&#160;sr04m.c'],['../sr04m_8c.html#a8535eb9ef4ab9d2a8237b2491d8a94ff',1,'SR04M_u_Init(SR04M_Object *p_obj, SR04M_IO *p_io):&#160;sr04m.c']]],
-  ['sr04m_5fu_5freadreg_6',['SR04M_u_ReadReg',['../group__SR04M__Private__IO.html#gaabac99ae49efcc489a69de52a85a3ece',1,'sr04m.c']]],
-  ['sr04m_5fu_5freadregwrap_7',['SR04M_u_ReadRegWrap',['../group__SR04M__Private__IO.html#gaffb68f8be0f5c6ff73d7d460f3948c80',1,'sr04m.c']]],
-  ['sr04m_5fu_5fwritereg_8',['SR04M_u_WriteReg',['../group__SR04M__Private__IO.html#ga1159d0ffa5d25ec2949c81c60d0bd294',1,'sr04m.c']]],
-  ['sr04m_5fu_5fwriteregwrap_9',['SR04M_u_WriteRegWrap',['../group__SR04M__Private__IO.html#gad28de8660a0f1ea9b0a748ac1f83c8ea',1,'sr04m.c']]],
-  ['sr04m_5fwritecommand_10',['SR04M_WriteCommand',['../sr04m__if_8c.html#a25ac4f75e7b2d5bb90babc9b347cf971',1,'sr04m_if.c']]],
-  ['ssd1309_5fdeinitialize_11',['SSD1309_DeInitialize',['../ssd1309__if_8c.html#a92f7ced4f0a515b21af4dfe68d2d8e06',1,'ssd1309_if.c']]],
-  ['ssd1309_5fgettick_12',['SSD1309_GetTick',['../ssd1309__if_8c.html#a238596f8078c11d094aaa43ab2bec4a3',1,'ssd1309_if.c']]],
-  ['ssd1309_5finitialize_13',['SSD1309_Initialize',['../ssd1309__if_8c.html#a7191750072ffcab27023f17560d64c60',1,'ssd1309_if.c']]],
-  ['ssd1309_5finitinterface_14',['SSD1309_InitInterface',['../ssd1309__if_8h.html#a23cf81e9936975a4ae5a76c89988b415',1,'SSD1309_InitInterface(SSD1315_Object_t *tp_obj):&#160;ssd1309_if.c'],['../ssd1309__if_8c.html#a23cf81e9936975a4ae5a76c89988b415',1,'SSD1309_InitInterface(SSD1315_Object_t *tp_obj):&#160;ssd1309_if.c']]],
-  ['ssd1309_5freaddata_15',['SSD1309_ReadData',['../ssd1309__if_8c.html#afd081c5f99404cc17fce3e80077fd10b',1,'ssd1309_if.c']]],
-  ['ssd1309_5fwritecommand_16',['SSD1309_WriteCommand',['../ssd1309__if_8c.html#a852de2b98d510d3554cfe46e1b6638a0',1,'ssd1309_if.c']]],
-  ['svc_5fhandler_17',['SVC_Handler',['../stm32l0xx__it_8c.html#a3e5ddb3df0d62f2dc357e64a3f04a6ce',1,'SVC_Handler(void):&#160;stm32l0xx_it.c'],['../stm32l0xx__it_8h.html#a3e5ddb3df0d62f2dc357e64a3f04a6ce',1,'SVC_Handler(void):&#160;stm32l0xx_it.c']]],
-  ['systemclock_5fv_5fconfig_18',['SYSTEMCLOCK_v_Config',['../system__clock_8c.html#a30e172b2551b3dabeea622f9ed9afcc8',1,'SYSTEMCLOCK_v_Config(void):&#160;system_clock.c'],['../system__clock_8h.html#a30e172b2551b3dabeea622f9ed9afcc8',1,'SYSTEMCLOCK_v_Config(void):&#160;system_clock.c']]],
-  ['systemcoreclockupdate_19',['SystemCoreClockUpdate',['../system__stm32l0xx_8c.html#ae0c36a9591fe6e9c45ecb21a794f0f0f',1,'system_stm32l0xx.c']]],
-  ['systeminit_20',['SystemInit',['../system__stm32l0xx_8c.html#a93f514700ccf00d08dbdcff7f1224eb2',1,'system_stm32l0xx.c']]],
-  ['systick_5fhandler_21',['SysTick_Handler',['../stm32l0xx__it_8c.html#ab5e09814056d617c521549e542639b7e',1,'SysTick_Handler(void):&#160;stm32l0xx_it.c'],['../stm32l0xx__it_8h.html#ab5e09814056d617c521549e542639b7e',1,'SysTick_Handler(void):&#160;stm32l0xx_it.c']]]
+  ['reset_5fhandler_0',['Reset_Handler',['../startup_8c.html#ae7ee340978f5c25f52f0cad1457c6616',1,'startup.c']]]
 ];
