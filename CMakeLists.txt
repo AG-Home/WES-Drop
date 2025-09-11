@@ -53,6 +53,8 @@ add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/third-party/STM32L0xx_HAL_ST stm32l
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib/display)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib/level)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Define the executable target for the project
 # This will compile and link the sources into the final executable
 add_executable(${PROJECT_NAME}_appl.out ${SOURCES})

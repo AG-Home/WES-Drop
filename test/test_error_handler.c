@@ -1,3 +1,14 @@
+/**********************************************************************************************************************
+ * \file test_error_handler.C
+ *
+ * \author MarcoAAG
+ *
+ * \date Sep-09-2025
+ *
+ * \version 1.0 \n \n
+ *
+ *********************************************************************************************************************/
+
 #include "error_handler.h"
 #include "unity.h"
 
@@ -41,7 +52,7 @@ void test_ERRH_t_DisplayClearError(void)
   TEST_ASSERT_EQUAL(e_retVal, ERR_NONE);
 }
 
-void test_ERRH_t_FatalError(void)
+void test_ERRH_t_LevelErrLimit(void)
 {
   WES_ErrorCode e_retVal;
   uint8_t       u_index;
