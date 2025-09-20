@@ -2,4 +2,4 @@
 set -e  # Exit immediately if any command fails
 
 ceedling clean
-ceedling test:all
+ceedling test:all gcov:all
