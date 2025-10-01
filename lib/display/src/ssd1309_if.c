@@ -82,10 +82,10 @@ DISPLAY_Status SSD1309_InitInterface(SSD1315_Object_t* tp_obj)
     e_retVal = DISPLAY_ERR_SSD1309;
   }
 
-  e_retVal = SSD1315_Init(tp_obj, SSD1315_FORMAT_DEFAULT, SSD1315_ORIENTATION_LANDSCAPE);
+  e_retVal = SSD1315_Driver.Init(tp_obj, SSD1315_FORMAT_DEFAULT, SSD1315_ORIENTATION_LANDSCAPE);
   if(e_retVal == SSD1315_OK)
   {
-    e_retVal = SSD1315_DisplayOn(tp_obj);
+    e_retVal = SSD1315_Driver.DisplayOn(tp_obj);
   }
 
   return e_retVal;

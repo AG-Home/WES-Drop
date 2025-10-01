@@ -82,11 +82,11 @@ static void DISPLAY_v_DrawChar(SSD1315_Object_t* t_pObj, uint8_t u_posX, uint8_t
     {
       if(u_rowData & (1 << (31 - u_col))) // MSB first
       {
-        SSD1315_SetPixel(t_pObj, u_posX + u_col, u_posY + u_row, SSD1315_COLOR_WHITE);
+        SSD1315_Driver.SetPixel(t_pObj, u_posX + u_col, u_posY + u_row, SSD1315_COLOR_WHITE);
       }
       else
       {
-        SSD1315_SetPixel(t_pObj, u_posX + u_col, u_posY + u_row, SSD1315_COLOR_BLACK);
+        SSD1315_Driver.SetPixel(t_pObj, u_posX + u_col, u_posY + u_row, SSD1315_COLOR_BLACK);
       }
     }
   }
@@ -103,7 +103,7 @@ static void DISPLAY_v_DrawString(SSD1315_Object_t* p_obj, uint8_t u_posX, uint8_
     u_offsetX += t_font->u_charWidth + u_tracking; // Go to next char
     p_str++;
   }
-  SSD1315_Refresh(p_obj);
+  SSD1315_Driver.Refresh(p_obj);
 }
 
 static void DISPLAY_v_U8ToStr(uint8_t u_num, char* p_str)
