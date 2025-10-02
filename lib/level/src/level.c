@@ -39,7 +39,7 @@ LEVEL_Status LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level)
   uint32_t     u_distanceRes;
   uint32_t     u_tmp;
 
-  if(SR04M_u_GetDistance(&p_obj->t_driver, &u_distance, p_obj->e_mode) != SR04M_OK)
+  if(SR04M_Driver.GetDistance(&p_obj->t_driver, &u_distance) != SR04M_OK)
   {
     e_retVal = LEVEL_ERR_DISTANCE;
   }

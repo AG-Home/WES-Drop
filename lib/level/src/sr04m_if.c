@@ -15,10 +15,12 @@
 extern "C" {
 #endif
 
+static uint8_t  SR04MIF_Init(void);
 static uint32_t SR04M_WriteCommand(uint8_t* pData, uint8_t Length);
 static uint32_t SR04M_ReadData(uint8_t* pData, uint8_t Length);
 
 SR04M_IO t_SR04T_IO = {
+  .init     = SR04MIF_Init,
   .writeReg = SR04M_WriteCommand,
   .readReg  = SR04M_ReadData,
 };
@@ -43,13 +45,23 @@ LEVEL_Status SR04M_InitInterface(SR04M_Object* tp_obj, LEVEL_UART_PARAMS* tp_uar
   }
   else
   {
-    if(SR04M_u_Init(tp_obj, &t_SR04T_IO) == SR04M_ERROR)
+    e_retVal = SR04M_e_RegisterBusIO(tp_obj, &t_SR04T_IO);
+
+    if(e_retVal == SR04M_OK)
     {
-      e_retVal = LEVEL_ERR_INIT;
+      if(SR04M_Driver.Init(tp_obj) == SR04M_ERROR)
+      {
+        e_retVal = LEVEL_ERR_INIT;
+      }
     }
   }
 
   return e_retVal;
+}
+
+static uint8_t SR04MIF_Init(void)
+{
+  return 0;
 }
 
 static uint32_t SR04M_WriteCommand(uint8_t* pData, uint8_t Length)
