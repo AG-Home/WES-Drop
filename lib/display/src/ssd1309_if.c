@@ -114,8 +114,7 @@ static int32_t SSD1309_WriteCommand(uint16_t Addr, uint8_t* pData, uint16_t Leng
 
   if(Length > SSD1309_MAX_LEN)
   {
-    // TODO Define error codes
-    u_stat = -1;
+    u_stat = DISPLAY_ERR_IIC;
   }
   else
   {
@@ -129,7 +128,8 @@ static int32_t SSD1309_WriteCommand(uint16_t Addr, uint8_t* pData, uint16_t Leng
 
 static int32_t SSD1309_ReadData(uint16_t Addr, uint8_t* pData, uint16_t Length)
 {
-  return -1;
+  // NOT SUPPORTED
+  return DISPLAY_ERR_NOTSUPP;
 }
 
 static int32_t SSD1309_GetTick(void)
