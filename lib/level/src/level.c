@@ -10,6 +10,7 @@
  *********************************************************************************************************************/
 
 #include <level.h>
+#include <sr04m_if.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -23,23 +24,23 @@ static const uint32_t u_MAX_MEAS        = MAX_MEAS * 10U;
 static const uint32_t u_CAPACITY        = u_MAX_MEAS - u_MIN_MEAS;
 static const uint32_t u_PACE_PERCENTAGE = u_CAPACITY;
 
-LEVEL_Status LEVEL_e_Init(Level_Object* p_obj)
+LEVEL_Status LEVEL_e_Init(void)
 {
   LEVEL_Status e_retVal;
 
-  e_retVal = SR04M_InitInterface(&p_obj->t_driver, &p_obj->t_uartParams);
+  e_retVal = SR04M_InitInterface();
 
   return e_retVal;
 }
 
-LEVEL_Status LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level)
+LEVEL_Status LEVEL_e_GetLevel(uint8_t* pu_level)
 {
   LEVEL_Status e_retVal = LEVEL_OK;
   uint16_t     u_distance;
   uint32_t     u_distanceRes;
   uint32_t     u_tmp;
 
-  if(SR04M_Driver.GetDistance(&p_obj->t_driver, &u_distance) != SR04M_OK)
+  if(SR04MIF_e_GetDistance(&u_distance) != LEVEL_OK)
   {
     e_retVal = LEVEL_ERR_DISTANCE;
   }

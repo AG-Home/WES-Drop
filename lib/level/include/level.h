@@ -12,26 +12,20 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
-#include <sr04m_if.h>
+#include <level_errors.h>
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct
-{
-  SR04M_Object      t_driver;
-  SR04M_Modes       e_mode;
-  LEVEL_UART_PARAMS t_uartParams;
-} Level_Object;
-
 /* ============================================================================================== */
 /*                                         Public Functions                                       */
 /* ============================================================================================== */
 
-LEVEL_Status LEVEL_e_Init(Level_Object* p_obj);
+LEVEL_Status LEVEL_e_Init(void);
 
-LEVEL_Status LEVEL_e_GetLevel(Level_Object* p_obj, uint8_t* pu_level);
+LEVEL_Status LEVEL_e_GetLevel(uint8_t* pu_level);
 
 #ifdef __cplusplus
 }

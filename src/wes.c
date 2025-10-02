@@ -18,13 +18,11 @@
 extern "C" {
 #endif
 
-#define BAUDRATE                 9600u
 #define MAX_LEVEL_INIT_ATTEMPS   5u
 #define MAX_DISPLAY_INIT_ATTEMPS 5u
 #define DELAY_ATTEMPS            20u
 
 Display_Object    t_displayObj;
-Level_Object      t_levelObj;
 WES_ErrorHandler* t_errorInstance;
 
 void WES_v_Init(void)
@@ -35,22 +33,13 @@ void WES_v_Init(void)
 
   t_errorInstance = ERRH_t_Init();
 
-  t_levelObj.t_uartParams.pt_instance             = USART2;
-  t_levelObj.t_uartParams.t_parameters.BaudRate   = BAUDRATE;
-  t_levelObj.t_uartParams.t_parameters.WordLength = UART_WORDLENGTH_8B;
-  t_levelObj.t_uartParams.t_parameters.StopBits   = UART_STOPBITS_1;
-  t_levelObj.t_uartParams.t_parameters.Parity     = UART_PARITY_NONE;
-  t_levelObj.t_uartParams.t_parameters.HwFlowCtl  = UART_HWCONTROL_NONE;
-  t_levelObj.t_uartParams.t_parameters.Mode       = UART_MODE_TX_RX;
-  t_levelObj.e_mode                               = MODE4;
-
-  e_levelStatus = LEVEL_e_Init(&t_levelObj);
+  e_levelStatus = LEVEL_e_Init();
   if(e_levelStatus != LEVEL_OK)
   {
     while(e_levelStatus != LEVEL_OK && u_attemps < MAX_LEVEL_INIT_ATTEMPS)
     {
       t_errorInstance->setError(ERR_LEVEL);
-      e_levelStatus = LEVEL_e_Init(&t_levelObj);
+      e_levelStatus = LEVEL_e_Init();
       u_attemps++;
       if(u_attemps >= MAX_LEVEL_INIT_ATTEMPS)
       {
@@ -84,7 +73,7 @@ void WES_v_RunApp(void)
   static uint8_t u_prevLevel;
   static uint8_t u_level;
 
-  e_levelStatus = LEVEL_e_GetLevel(&t_levelObj, &u_level);
+  e_levelStatus = LEVEL_e_GetLevel(&u_level);
 
   if(e_levelStatus == LEVEL_OK)
   {

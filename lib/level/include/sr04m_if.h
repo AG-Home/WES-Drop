@@ -13,20 +13,15 @@
 #define SR04M_IF_H
 
 #include <level_errors.h>
-#include <sr04m.h>
-#include <stm32l0xx_hal.h>
+#include <stdint.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct
-{
-  USART_TypeDef*   pt_instance;
-  UART_InitTypeDef t_parameters;
-} LEVEL_UART_PARAMS;
+LEVEL_Status SR04M_InitInterface(void);
 
-LEVEL_Status SR04M_InitInterface(SR04M_Object* tp_obj, LEVEL_UART_PARAMS* tp_uartObj);
+LEVEL_Status SR04MIF_e_GetDistance(uint16_t* u_distance);
 
 #ifdef __cplusplus
 }
