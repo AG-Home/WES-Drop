@@ -12,6 +12,7 @@
 #include <display.h>
 #include <error_handler.h>
 #include <level.h>
+#include <stm32l0xx_hal.h>
 #include <wes.h>
 
 #ifdef __cplusplus

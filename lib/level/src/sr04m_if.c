@@ -40,6 +40,14 @@ LEVEL_Status SR04M_InitInterface(void)
     {
       e_retVal = LEVEL_ERR_INIT;
     }
+    else
+    {
+      SR04M_Driver.SetMode(&SR04M_Obj, MODE4);
+    }
+  }
+  else
+  {
+    e_retVal = LEVEL_ERR_INIT;
   }
 
   return e_retVal;
